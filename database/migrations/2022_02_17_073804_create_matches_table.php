@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('matches', function (Blueprint $table) {
             $table->id();
-            $table->integer('clubs_id');
-            $table->integer('rivals_id');
-            $table->datetime('scedhule');
+            $table->foreignId('clubs_id')->nullable()->index('clubs_id_fk4_idx');
+            $table->foreignId('rivals_id')->nullable()->index('clubs_id_fk5_idx');
+            $table->datetime('schedule');
             $table->timestamps();
         });
     }

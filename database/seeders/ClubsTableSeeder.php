@@ -17,9 +17,6 @@ class ClubsTableSeeder extends Seeder
      */
     public function run()
     {
-        //truncate DB
-        DB::table('clubs')->truncate();
-
         $clubs=[
             [
                 'stadiums_id'   => '1',

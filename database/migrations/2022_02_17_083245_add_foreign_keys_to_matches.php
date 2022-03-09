@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('matches', function (Blueprint $table) {
-            $table->foreign('clubs_id', 'clubs_id_fk3')->references('id')->on('clubs')->onUpdate('cascade')->onDelete('restrict');
-            $table->foreign('rivals_id', 'rivals_id_fk3')->references('id')->on('clubs')->onUpdate('cascade')->onDelete('restrict');
+            $table->foreign('clubs_id', 'clubs_id_fk4')->references('id')->on('clubs')->onUpdate('cascade')->onDelete('restrict');
+            $table->foreign('rivals_id', 'rivals_id_fk5')->references('id')->on('clubs')->onUpdate('cascade')->onDelete('restrict');
         });
     }
 
@@ -27,8 +27,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('matches', function (Blueprint $table) {
-            $table->dropForeign('clubs_id_fk3');
-            $table->dropForeign('rivals_id_fk3');
+            $table->dropForeign('clubs_id_fk4');
+            $table->dropForeign('rivals_id_fk5');
         });
     }
 };

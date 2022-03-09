@@ -16,8 +16,6 @@ class StadiumsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('stadiums')->truncate();
-
         $stadium = [
             [
                 'name'          => 'Stamford Bridge',

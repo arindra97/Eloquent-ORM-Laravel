@@ -16,8 +16,6 @@ class ManagersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('managers')->truncate();
-
         $managers = [
             [
                 'clubs_id'      => 1,
